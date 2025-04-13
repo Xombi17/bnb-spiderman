@@ -184,7 +184,7 @@ export default function HeroSection() {
               style={imageAnimation.style}
               className="relative h-[400px] md:h-[500px] animate-web-swing"
             >
-              <Image src="/spider-man-1.png" alt="Spider-Man" fill className="object-contain" priority />
+              <Image src="/" alt="Spider-Man" fill className="object-contain" priority />
             </div>
 
             {/* Web lines connecting to Spider-Man */}

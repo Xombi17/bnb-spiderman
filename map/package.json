@@ -1,0 +1,21 @@
+{
+  "name": "svg-2d-world-map-mercator-projection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "chunk-array": "1.0.2",
+    "csvtojson": "2.0.8",
+    "mercator-projection": "0.0.2",
+    "three": "0.102.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}

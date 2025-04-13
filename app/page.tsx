@@ -60,8 +60,6 @@ export default function Home() {
         <EventOverview />
         <ChallengesSection />
         <ScheduleSection />
-        <TestimonialsSection />
-        <RegistrationForm />
       </main>
       <Footer />
     </div>
