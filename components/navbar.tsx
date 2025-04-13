@@ -49,17 +49,17 @@ export default function Navbar() {
                 <span className="absolute inset-0 bg-spiderman-darkblue/40 rounded-md blur-sm opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
               </Link>
               <Link
-                href="#domains"
+                href="#challenges"
                 className="text-cyan-100 hover:text-white transition-colors text-sm uppercase font-medium tracking-wider relative group border border-white/40 rounded px-3 py-1 shadow-[0_0_5px_rgba(255,255,255,0.4)] hover:shadow-[0_0_10px_rgba(255,255,255,0.6)]"
               >
-                <span className="relative z-10">Domains</span>
+                <span className="relative z-10">Challenges</span>
                 <span className="absolute inset-0 bg-spiderman-darkblue/40 rounded-md blur-sm opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
               </Link>
               <Link
-                href="#timeline"
+                href="#schedule"
                 className="text-cyan-100 hover:text-white transition-colors text-sm uppercase font-medium tracking-wider relative group border border-white/40 rounded px-3 py-1 shadow-[0_0_5px_rgba(255,255,255,0.4)] hover:shadow-[0_0_10px_rgba(255,255,255,0.6)]"
               >
-                <span className="relative z-10">Timeline</span>
+                <span className="relative z-10">Schedule</span>
                 <span className="absolute inset-0 bg-spiderman-darkblue/40 rounded-md blur-sm opacity-0 group-hover:opacity-100 transition-opacity -z-10"></span>
               </Link>
               <Link
