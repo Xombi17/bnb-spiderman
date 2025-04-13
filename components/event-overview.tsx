@@ -123,7 +123,7 @@ export default function EventOverview() {
           >
             <h2 className="text-3xl font-bold text-white mb-6 font-spiderman-readable">About Us</h2>
             <p className="text-white/80 mb-6">
-              BIT N BUILD 2024 is a 24-hour hackathon organized by GDSC-CRCE that brings together the brightest minds from across the country. Themed around Spider-Man, this event celebrates creativity, innovation, and problem-solving, all while embracing the responsibilty that comes with technological power.
+              BIT N BUILD  is a 24-hour hackathon organized by GDSC-CRCE that brings together the brightest minds from across the country. Themed around Spider-Man, this event celebrates creativity, innovation, and problem-solving, all while embracing the responsibilty that comes with technological power.
             </p>
 
             <div ref={locationAnimation.ref} style={locationAnimation.style}>
@@ -145,6 +145,8 @@ export default function EventOverview() {
                   <ul className="text-white/70 list-disc pl-5">
                     <li>Web Technologies</li>
                     <li>AI & Machine Learning</li>
+                    <li>Blockchain</li>
+                    <li>App Development</li>
                   </ul>
                 </div>
                 <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm">

@@ -13,7 +13,7 @@ export default function Footer() {
               <Image src="/gdsc.png" alt="BitnBuild Logo" width={80} height={30} />
               </div>
             <p className="text-white/70 mb-6">
-              BitnBuild 2024 is a global hackathon organized by GDSC-CRCE, bringing together developers to build innovative solutions.
+              BitnBuild is a global hackathon organized by GDSC-CRCE, bringing together developers to build innovative solutions.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-spiderman-red transition-colors">
