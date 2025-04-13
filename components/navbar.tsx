@@ -93,7 +93,7 @@ export default function Navbar() {
             </nav>
             
             <Link
-              href="#register"
+              href="/register"
               className="hidden md:flex bg-spiderman-red text-white py-2 px-5 rounded-md hover:bg-spiderman-red/80 transition-all font-medium items-center justify-center web-button relative overflow-hidden group"
             >
               <span className="relative z-10">Register</span>
@@ -197,7 +197,7 @@ export default function Navbar() {
                 <span className="absolute inset-0 bg-spiderman-darkblue/60 backdrop-blur-sm rounded-md opacity-0 hover:opacity-100 transition-opacity -z-10"></span>
               </Link>
               <Link
-                href="#register"
+                href="/register"
                 className="bg-spiderman-red text-white py-2 px-4 rounded-md hover:bg-spiderman-red/80 transition-colors font-medium inline-block text-center text-shadow-glow hover:shadow-[0_0_15px_rgba(237,29,36,0.6)]"
                 onClick={() => setMobileMenuOpen(false)}
               >

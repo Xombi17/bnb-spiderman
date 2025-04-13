@@ -222,7 +222,8 @@ export default function RegistrationForm() {
                           Processing...
                         </>
                       ) : (
-                        "Register Now"
+                        <span className="relative z-10">Register Now</span>
+                        <span className="absolute inset-0 bg-spiderman-darkblue/60 backdrop-blur-sm rounded-md opacity-0 hover:opacity-100 transition-opacity -z-10"></span>
                       )}
                     </button>
                   </form>
