@@ -125,12 +125,12 @@ export default function ContactSection() {
             
             {/* Decorative web in corner */}
             <div className="absolute -top-10 -right-10 w-32 h-32 opacity-70">
-              <Image src="/spider-web-corner.svg" alt="Web" layout="fill" objectFit="contain" />
+              <Image src="/images/web-corner.svg" alt="Web" layout="fill" objectFit="contain" />
             </div>
             
             {/* Small Spider-Man */}
             <div className="absolute -bottom-10 right-10 w-24 h-24 animate-bounce" style={{ animationDuration: "3s" }}>
-              <Image src="/spider-silhouette.svg" alt="Spider-Man" layout="fill" objectFit="contain" />
+              <Image src="/spiderman3.png" alt="Spider-Man" layout="fill" objectFit="contain" />
             </div>
           </div>
 
@@ -144,7 +144,7 @@ export default function ContactSection() {
             <div className="transform rotate-[-1deg] hover:rotate-0 transition-transform">
               <div className="bg-gradient-to-br from-spiderman-red/80 to-spiderman-darkblue p-6 rounded-lg border-2 border-white shadow-lg relative overflow-hidden h-full">
                 <div className="absolute top-0 right-0 w-20 h-20 opacity-20 rotate-45">
-                  <Image src="/spider-silhouette.svg" alt="Spider" layout="fill" objectFit="contain" />
+                  <Image src="/images/spider-silhouette.svg" alt="Spider" layout="fill" objectFit="contain" />
                 </div>
                 <div className="bg-yellow-400 text-black font-bold py-1 px-4 rounded-lg transform -rotate-3 inline-block text-lg mb-4 shadow-md font-spiderman-readable">
                   TECHNICAL LEAD
@@ -162,7 +162,7 @@ export default function ContactSection() {
             <div className="transform rotate-[1deg] hover:rotate-0 transition-transform">
               <div className="bg-gradient-to-br from-spiderman-blue/80 to-spiderman-darkblue p-6 rounded-lg border-2 border-white shadow-lg relative overflow-hidden h-full">
                 <div className="absolute top-0 right-0 w-20 h-20 opacity-20 rotate-45">
-                  <Image src="/spider-silhouette.svg" alt="Spider" layout="fill" objectFit="contain" />
+                  <Image src="/images/spider-silhouette.svg" alt="Spider" layout="fill" objectFit="contain" />
                 </div>
                 <div className="bg-yellow-400 text-black font-bold py-1 px-4 rounded-lg transform -rotate-3 inline-block text-lg mb-4 shadow-md font-spiderman-readable">
                   MANAGEMENT LEAD
@@ -180,7 +180,7 @@ export default function ContactSection() {
             <div className="transform rotate-[-1deg] hover:rotate-0 transition-transform">
               <div className="bg-gradient-to-br from-spiderman-darkblue to-spiderman-red/80 p-6 rounded-lg border-2 border-white shadow-lg relative overflow-hidden h-full">
                 <div className="absolute top-0 right-0 w-20 h-20 opacity-20 rotate-45">
-                  <Image src="/spider-silhouette.svg" alt="Spider" layout="fill" objectFit="contain" />
+                  <Image src="/images/spider-silhouette.svg" alt="Spider" layout="fill" objectFit="contain" />
                 </div>
                 <div className="bg-yellow-400 text-black font-bold py-1 px-4 rounded-lg transform -rotate-3 inline-block text-lg mb-4 shadow-md font-spiderman-readable">
                   HEAD OF OPERATIONS
