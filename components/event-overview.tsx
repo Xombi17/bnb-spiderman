@@ -170,7 +170,7 @@ export default function EventOverview() {
               />
               
               {/* Mumbai location marker */}
-              <div className="absolute top-42% left-61% transform -translate-x-1/2 -translate-y-1/2 z-10">
+              <div className="absolute top-[60%] left-[66%] transform -translate-x-1/2 -translate-y-1/2 z-10">
                 <div className="w-4 h-4 bg-spiderman-red rounded-full animate-pulse"></div>
                 <div className="w-12 h-12 bg-spiderman-red/20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping"></div>
                 <div className="absolute top-6 left-0 transform -translate-x-1/4 bg-spiderman-darkblue/80 px-3 py-1 rounded-lg border border-spiderman-red/30 whitespace-nowrap">
