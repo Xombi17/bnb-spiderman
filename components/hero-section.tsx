@@ -77,9 +77,9 @@ export default function HeroSection() {
       {/* Layered subtle background images */}
       <div className="absolute inset-0 z-0 mix-blend-overlay opacity-5">
         <div className="absolute right-0 top-0 w-full h-full">
-          <Image 
+        <Image
             src="/spiderman4.jpg" 
-            alt="Spider-Man" 
+          alt="Spider-Man"
             layout="fill" 
             objectFit="cover" 
             objectPosition="right top" 
@@ -88,7 +88,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      
+
       <div className="absolute inset-0 z-0 mix-blend-soft-light opacity-8">
         <div className="absolute left-0 bottom-0 w-1/2 h-1/2 transform -translate-x-1/4">
           <Image 
@@ -100,7 +100,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      
+
       {/* City skyline with very low opacity */}
       <div className="absolute bottom-0 left-0 right-0 z-0 mix-blend-overlay opacity-10">
         <div className="absolute bottom-0 w-full h-[30vh]">
@@ -140,17 +140,17 @@ export default function HeroSection() {
       {/* Animated spider webs in corners */}
       <div className="absolute top-0 left-0 w-32 h-32 opacity-30 z-0">
         <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-0 web-corner" />
-      </div>
+          </div>
       <div className="absolute top-0 right-0 w-32 h-32 opacity-30 z-0">
         <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-90 web-corner" />
-      </div>
+          </div>
       <div className="absolute bottom-0 right-0 w-32 h-32 opacity-30 z-0">
         <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-180 web-corner" />
-      </div>
+        </div>
       <div className="absolute bottom-0 left-0 w-32 h-32 opacity-30 z-0">
         <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-270 web-corner" />
       </div>
-      
+
       {/* Spider-Man logo with very low opacity */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-5 z-0 mix-blend-overlay">
         <Image src="/spider-logo.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
@@ -204,7 +204,7 @@ export default function HeroSection() {
                 <span className="absolute inset-0 w-0 bg-white/10 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </div>
-          </div>
+              </div>
 
           {/* Spider swinging animation */}
           <div ref={parallaxRef} className="relative h-20 w-full mt-8">
@@ -218,9 +218,9 @@ export default function HeroSection() {
                 />
               </div>
             </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
       {/* Countdown Section - Integrated with hero */}
       <div className="relative w-full mt-auto z-10">
