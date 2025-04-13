@@ -52,6 +52,28 @@ export default function PrizesSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-spiderman-blue to-spiderman-darkblue/90"></div>
       </div>
+      
+      {/* Spider-Man themed decorations */}
+      <div className="spiderweb-corner spiderweb-corner-tl"></div>
+      <div className="spiderweb-corner spiderweb-corner-tr"></div>
+      <div className="spiderweb-corner spiderweb-corner-br"></div>
+      <div className="spiderweb-corner spiderweb-corner-bl"></div>
+      
+      {/* Web pattern background */}
+      <div className="absolute inset-0 spiderweb-pattern z-0"></div>
+      
+      {/* Decorative spider web strings */}
+      <div className="absolute top-40 left-10 w-0.5 h-32 bg-white/10 origin-top web-swing"></div>
+      <div className="absolute top-40 right-10 w-0.5 h-40 bg-white/10 origin-top web-swing" style={{ animationDelay: "0.4s" }}></div>
+      <div className="absolute bottom-40 left-1/4 w-0.5 h-24 bg-white/10 origin-top web-swing" style={{ animationDelay: "0.8s" }}></div>
+      
+      {/* Subtle spider symbols */}
+      <div className="absolute top-1/3 right-0 w-48 h-48 opacity-5 spider-crawl">
+        <Image src="/spider-logo.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
+      </div>
+      <div className="absolute bottom-1/3 left-0 w-36 h-36 opacity-5 spider-crawl" style={{ animationDelay: "1.5s" }}>
+        <Image src="/spider-logo.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -77,8 +99,17 @@ export default function PrizesSection() {
           <div
             ref={secondPrizeAnimation.ref}
             style={secondPrizeAnimation.style}
-            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:translate-y-12 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300"
+            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:translate-y-12 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300 relative overflow-hidden group"
           >
+            {/* Web corner decoration that appears on hover */}
+            <div className="absolute top-0 left-0 w-16 h-16 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
+              style={{
+                backgroundImage: "url('/web-corner.png')",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat"
+              }}>
+            </div>
+            
             <div className="relative w-24 h-24 mx-auto mb-4">
               <Image
                 src="/silver-trophy.png"
@@ -89,7 +120,7 @@ export default function PrizesSection() {
               />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">2nd Prize</h3>
-            <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 mb-4">
+            <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 mb-4 spidey-sense">
               <p className="text-xl font-bold text-white">₹50,000</p>
             </div>
             <ul className="text-white/80 space-y-2">
@@ -103,8 +134,19 @@ export default function PrizesSection() {
           <div
             ref={firstPrizeAnimation.ref}
             style={firstPrizeAnimation.style}
-            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:-translate-y-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300"
+            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:-translate-y-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300 relative overflow-hidden group"
           >
+            {/* Web corner decoration that appears on hover */}
+            <div className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
+              style={{
+                backgroundImage: "url('/web-corner.png')",
+                backgroundSize: "contain",
+                backgroundPosition: "top right",
+                backgroundRepeat: "no-repeat",
+                transform: "rotate(90deg)"
+              }}>
+            </div>
+            
             <div className="relative w-32 h-32 mx-auto mb-4">
               <div className="absolute -top-4 -left-4 -right-4 h-1 bg-spiderman-red"></div>
               <div className="absolute -top-4 -bottom-4 -left-4 w-1 bg-spiderman-red"></div>
@@ -119,7 +161,7 @@ export default function PrizesSection() {
               />
             </div>
             <h3 className="text-3xl font-bold text-white mb-2">1st Prize</h3>
-            <div className="bg-spiderman-red rounded-lg py-3 px-4 mb-4">
+            <div className="bg-spiderman-red rounded-lg py-3 px-4 mb-4 spidey-sense">
               <p className="text-2xl font-bold text-white">₹100,000</p>
             </div>
             <ul className="text-white/80 space-y-2">
@@ -135,8 +177,19 @@ export default function PrizesSection() {
           <div
             ref={thirdPrizeAnimation.ref}
             style={thirdPrizeAnimation.style}
-            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:translate-y-12 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300"
+            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:translate-y-12 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300 relative overflow-hidden group"
           >
+            {/* Web corner decoration that appears on hover */}
+            <div className="absolute bottom-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
+              style={{
+                backgroundImage: "url('/web-corner.png')",
+                backgroundSize: "contain",
+                backgroundPosition: "bottom right",
+                backgroundRepeat: "no-repeat",
+                transform: "rotate(180deg)"
+              }}>
+            </div>
+            
             <div className="relative w-24 h-24 mx-auto mb-4">
               <Image
                 src="/bronze-trophy.png"
@@ -147,7 +200,7 @@ export default function PrizesSection() {
               />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">3rd Prize</h3>
-            <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 mb-4">
+            <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 mb-4 spidey-sense">
               <p className="text-xl font-bold text-white">₹25,000</p>
             </div>
             <ul className="text-white/80 space-y-2">

@@ -72,6 +72,16 @@ export default function ChallengesSection() {
         <Image src="/spider-man-1.png" alt="Spider-Man" fill className="object-cover object-center opacity-5" />
         <div className="absolute inset-0 bg-gradient-to-b from-spiderman-darkblue to-spiderman-blue"></div>
       </div>
+      
+      {/* Add web corners */}
+      <div className="spiderweb-corner spiderweb-corner-tl"></div>
+      <div className="spiderweb-corner spiderweb-corner-tr"></div>
+      <div className="spiderweb-corner spiderweb-corner-br"></div>
+      <div className="spiderweb-corner spiderweb-corner-bl"></div>
+      
+      {/* Spider symbol */}
+      <div className="spider-symbol absolute w-48 h-48 right-10 top-1/4 opacity-5 spider-crawl"></div>
+      <div className="spider-symbol absolute w-32 h-32 left-10 bottom-1/4 opacity-5"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -93,9 +103,20 @@ export default function ChallengesSection() {
           <div
             ref={challengeAnimations[0].ref}
             style={challengeAnimations[0].style}
-            className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 hover:border-spiderman-red/50 transition-colors group"
+            className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 hover:border-spiderman-red/50 transition-colors group relative overflow-hidden"
           >
-            <div className="w-14 h-14 bg-spiderman-red/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-spiderman-red/30 transition-colors">
+            {/* Subtle web corner */}
+            <div className="absolute top-0 right-0 w-16 h-16 opacity-10 transition-opacity group-hover:opacity-20" 
+                style={{
+                  backgroundImage: "url('/web-corner.png')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "top right",
+                  backgroundRepeat: "no-repeat",
+                  transform: "rotate(90deg)"
+                }}>
+            </div>
+            
+            <div className="w-14 h-14 bg-spiderman-red/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-spiderman-red/30 transition-colors spidey-sense">
               <Globe className="h-8 w-8 text-spiderman-red" />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Web Development</h3>
@@ -113,9 +134,20 @@ export default function ChallengesSection() {
           <div
             ref={challengeAnimations[1].ref}
             style={challengeAnimations[1].style}
-            className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 hover:border-spiderman-red/50 transition-colors group"
+            className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 hover:border-spiderman-red/50 transition-colors group relative overflow-hidden"
           >
-            <div className="w-14 h-14 bg-spiderman-red/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-spiderman-red/30 transition-colors">
+            {/* Subtle web corner */}
+            <div className="absolute top-0 right-0 w-16 h-16 opacity-10 transition-opacity group-hover:opacity-20" 
+                style={{
+                  backgroundImage: "url('/web-corner.png')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "top right",
+                  backgroundRepeat: "no-repeat",
+                  transform: "rotate(90deg)"
+                }}>
+            </div>
+            
+            <div className="w-14 h-14 bg-spiderman-red/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-spiderman-red/30 transition-colors spidey-sense">
               <Cpu className="h-8 w-8 text-spiderman-red" />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">AI & Machine Learning</h3>
@@ -206,6 +238,10 @@ export default function ChallengesSection() {
           </div>
         </div>
       </div>
+      
+      {/* Floating web string */}
+      <div className="absolute bottom-20 left-1/4 w-0.5 h-24 bg-white/10 origin-top web-swing"></div>
+      <div className="absolute bottom-10 right-1/3 w-0.5 h-32 bg-white/10 origin-top web-swing" style={{ animationDelay: "0.5s" }}></div>
       
       {/* Dark gradient transition to next section */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-darkblue to-transparent"></div>

@@ -213,7 +213,7 @@ export default function HeroSection() {
               <div className="w-px h-20 bg-spiderman-red/40 animate-pulse"></div>
               <div className="w-10 h-10 absolute -bottom-5 left-1/2 transform -translate-x-1/2 animate-bounce filter drop-shadow-lg">
                 <img
-                  src="/spider-man-1.png"
+                  src="/spiderman3.png"
                   alt="Spider-Man"
                   className="w-full h-full object-contain"
                 />

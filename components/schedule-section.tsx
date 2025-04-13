@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { initAnimations } from "@/utils/animation"
+import Image from "next/image"
 
 export default function ScheduleSection() {
   useEffect(() => {
@@ -16,6 +17,23 @@ export default function ScheduleSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-spiderman-darkblue to-spiderman-blue/90"></div>
       </div>
       
+      {/* Spider-Man themed decorations */}
+      <div className="spiderweb-corner spiderweb-corner-tl"></div>
+      <div className="spiderweb-corner spiderweb-corner-tr"></div>
+      <div className="spiderweb-corner spiderweb-corner-br"></div>
+      <div className="spiderweb-corner spiderweb-corner-bl"></div>
+      
+      {/* Spider symbols */}
+      <div className="absolute top-1/3 left-5 w-16 h-16 opacity-5 spider-crawl">
+        <Image src="/spider-logo.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
+      </div>
+      <div className="absolute bottom-1/4 right-5 w-16 h-16 opacity-5 spider-crawl" style={{ animationDelay: "1s" }}>
+        <Image src="/spider-logo.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
+      </div>
+      
+      {/* Web pattern background */}
+      <div className="absolute inset-0 spiderweb-pattern z-0"></div>
+      
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 relative inline-block">
@@ -28,12 +46,12 @@ export default function ScheduleSection() {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Vertical timeline line */}
+            {/* Vertical timeline line - now styled like web string */}
             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-spiderman-red/30 transform md:translate-x-px"></div>
 
             {/* Day 1 */}
             <div className="mb-8 text-center">
-              <div className="inline-block bg-spiderman-red text-white px-6 py-2 rounded-full text-lg font-bold">
+              <div className="inline-block bg-spiderman-red text-white px-6 py-2 rounded-full text-lg font-bold spidey-sense">
                 Day 1
               </div>
             </div>
@@ -43,7 +61,16 @@ export default function ScheduleSection() {
               {/* Item 1 */}
               <div className="flex flex-col md:flex-row items-center mb-12 scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10 relative group overflow-hidden">
+                    {/* Web corner decoration that appears on hover */}
+                    <div className="absolute top-0 left-0 w-12 h-12 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
+                      style={{
+                        backgroundImage: "url('/web-corner.png')",
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat"
+                      }}>
+                    </div>
+                    
                     <h3 className="text-xl font-bold text-white mb-2">Registration & Check-in</h3>
                     <p className="text-white/70 mb-2">
                       Arrive early to check in, get your swag, and set up your workspace.
@@ -53,7 +80,7 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="order-1 md:order-2 flex items-center justify-center">
-                  <div className="w-10 h-10 bg-spiderman-red rounded-full flex items-center justify-center border-4 border-spiderman-darkblue">
+                  <div className="w-10 h-10 bg-spiderman-red rounded-full flex items-center justify-center border-4 border-spiderman-darkblue spidey-sense">
                     <span className="text-white font-bold">1</span>
                   </div>
                 </div>
@@ -168,7 +195,7 @@ export default function ScheduleSection() {
 
               {/* Day 2 */}
               <div className="mb-8 text-center">
-                <div className="inline-block bg-spiderman-red text-white px-6 py-2 rounded-full text-lg font-bold">
+                <div className="inline-block bg-spiderman-red text-white px-6 py-2 rounded-full text-lg font-bold spidey-sense">
                   Day 2
                 </div>
               </div>
@@ -278,8 +305,12 @@ export default function ScheduleSection() {
         </div>
       </div>
       
+      {/* Add floating web strings */}
+      <div className="absolute top-1/4 right-10 w-0.5 h-32 bg-white/10 origin-top web-swing"></div>
+      <div className="absolute bottom-1/3 left-10 w-0.5 h-24 bg-white/10 origin-top web-swing" style={{ animationDelay: "0.7s" }}></div>
+      
       {/* Dark gradient transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-blue to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-darkblue to-transparent"></div>
     </section>
   )
 }
