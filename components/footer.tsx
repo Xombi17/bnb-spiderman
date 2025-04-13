@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <Image src="/spider-man-logo.png" alt="BitnBuild Logo" width={80} height={30} />
+              <Image src="/gdsc.png" alt="BitnBuild Logo" width={80} height={30} />
               </div>
             <p className="text-white/70 mb-6">
               BitnBuild 2024 is a global hackathon organized by GDSC-CRCE, bringing together developers to build innovative solutions.
