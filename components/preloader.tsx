@@ -74,18 +74,32 @@ export default function Preloader() {
 
       {/* Animated web lines */}
       <div ref={webLinesRef} className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white/10"></div>
-        <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-white/10"></div>
-
-        {/* Web lines that shoot out when progress reaches 100% */}
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0.5 h-0 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-45 web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-45 web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[22.5deg] web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[67.5deg] web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[22.5deg] web-line-animated"></div>
-        <div className="absolute top-1/2 left-1/2 w-0 h-0.5 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[67.5deg] web-line-animated"></div>
+        {/* Removing the basic x and y axis lines */}
+        
+        {/* Enhanced web lines that shoot out when progress reaches 100% */}
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-1 h-0 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-45 web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-45 web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[22.5deg] web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[67.5deg] web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[22.5deg] web-line-animated opacity-80"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[67.5deg] web-line-animated opacity-80"></div>
+        
+        {/* Additional web lines for a more complete web effect */}
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[11.25deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[33.75deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[56.25deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 rotate-[78.75deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[11.25deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[33.75deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[56.25deg] web-line-animated opacity-70 delay-100"></div>
+        <div className="absolute top-1/2 left-1/2 w-0 h-1 bg-spiderman-red transform -translate-x-1/2 -translate-y-1/2 -rotate-[78.75deg] web-line-animated opacity-70 delay-100"></div>
+        
+        {/* Circular web connectors */}
+        <div className="absolute top-1/2 left-1/2 w-[200px] h-[200px] rounded-full border border-spiderman-red/30 transform -translate-x-1/2 -translate-y-1/2 opacity-0 animate-web-circle delay-200"></div>
+        <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full border border-spiderman-red/20 transform -translate-x-1/2 -translate-y-1/2 opacity-0 animate-web-circle delay-300"></div>
+        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] rounded-full border border-spiderman-red/10 transform -translate-x-1/2 -translate-y-1/2 opacity-0 animate-web-circle delay-400"></div>
       </div>
 
       {/* Spider-Man logo */}
@@ -123,41 +137,63 @@ export default function Preloader() {
         <span className="text-spiderman-red font-bold">{progress}%</span>
       </div>
 
-      {/* Spider web corners */}
-      <div className="absolute top-0 left-0 w-32 h-32 opacity-20">
+      {/* Spider web corners - enhanced with more detailed webs */}
+      <div className="absolute top-0 left-0 w-40 h-40 opacity-20">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10"
+            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10 M5 0 L50 45 M0 5 L45 50 M15 0 L50 35 M0 15 L35 50 M25 0 L50 25 M0 25 L25 50 M35 0 L50 15 M0 35 L15 50"
             stroke="white"
             strokeWidth="0.5"
             fill="none"
           />
         </svg>
       </div>
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-20 rotate-90">
+      <div className="absolute top-0 right-0 w-40 h-40 opacity-20 rotate-90">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10"
+            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10 M5 0 L50 45 M0 5 L45 50 M15 0 L50 35 M0 15 L35 50 M25 0 L50 25 M0 25 L25 50 M35 0 L50 15 M0 35 L15 50"
             stroke="white"
             strokeWidth="0.5"
             fill="none"
           />
         </svg>
       </div>
-      <div className="absolute bottom-0 left-0 w-32 h-32 opacity-20 -rotate-90">
+      <div className="absolute bottom-0 left-0 w-40 h-40 opacity-20 -rotate-90">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10"
+            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10 M5 0 L50 45 M0 5 L45 50 M15 0 L50 35 M0 15 L35 50 M25 0 L50 25 M0 25 L25 50 M35 0 L50 15 M0 35 L15 50"
             stroke="white"
             strokeWidth="0.5"
             fill="none"
           />
         </svg>
       </div>
-      <div className="absolute bottom-0 right-0 w-32 h-32 opacity-20 rotate-180">
+      <div className="absolute bottom-0 right-0 w-40 h-40 opacity-20 rotate-180">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10"
+            d="M0 0 L50 50 M0 10 L40 50 M0 20 L30 50 M0 30 L20 50 M0 40 L10 50 M10 0 L50 40 M20 0 L50 30 M30 0 L50 20 M40 0 L50 10 M5 0 L50 45 M0 5 L45 50 M15 0 L50 35 M0 15 L35 50 M25 0 L50 25 M0 25 L25 50 M35 0 L50 15 M0 35 L15 50"
+            stroke="white"
+            strokeWidth="0.5"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      {/* Spider webs in mid-sections of edges */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-20 opacity-15">
+        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M50 0 L50 50 M45 0 L45 45 M40 0 L40 40 M35 0 L35 35 M30 0 L30 30 M25 0 L25 25 M20 0 L20 20 M15 0 L15 15 M10 0 L10 10 M5 0 L5 5 M55 0 L55 45 M60 0 L60 40 M65 0 L65 35 M70 0 L70 30 M75 0 L75 25 M80 0 L80 20 M85 0 L85 15 M90 0 L90 10 M95 0 L95 5"
+            stroke="white"
+            strokeWidth="0.5"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-180 w-40 h-20 opacity-15">
+        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M50 0 L50 50 M45 0 L45 45 M40 0 L40 40 M35 0 L35 35 M30 0 L30 30 M25 0 L25 25 M20 0 L20 20 M15 0 L15 15 M10 0 L10 10 M5 0 L5 5 M55 0 L55 45 M60 0 L60 40 M65 0 L65 35 M70 0 L70 30 M75 0 L75 25 M80 0 L80 20 M85 0 L85 15 M90 0 L90 10 M95 0 L95 5"
             stroke="white"
             strokeWidth="0.5"
             fill="none"
@@ -180,6 +216,57 @@ export default function Preloader() {
           ></div>
         ))}
       </div>
+
+      <style jsx>{`
+        @keyframes webCircleAnimation {
+          0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+          }
+          50% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+        
+        .animate-web-circle {
+          animation: webCircleAnimation 1s forwards;
+        }
+        
+        .delay-100 {
+          animation-delay: 100ms;
+        }
+        
+        .delay-200 {
+          animation-delay: 200ms;
+        }
+        
+        .delay-300 {
+          animation-delay: 300ms;
+        }
+        
+        .delay-400 {
+          animation-delay: 400ms;
+        }
+        
+        .web-line-animated {
+          animation: none;
+        }
+        
+        .animate-web-shoot-all .web-line-animated {
+          animation: webShoot 0.5s forwards;
+        }
+        
+        @keyframes webShoot {
+          to {
+            width: 200vw;
+          }
+        }
+      `}</style>
     </div>
   )
 }

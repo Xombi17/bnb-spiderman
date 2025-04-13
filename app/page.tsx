@@ -15,11 +15,14 @@ import Footer from "@/components/footer"
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [animationComplete, setAnimationComplete] = useState(false)
 
   useEffect(() => {
     // Set isLoaded to true after preloader completes
     const timer = setTimeout(() => {
       setIsLoaded(true)
+      // Start the staggered animations immediately for navbar, delay for other elements
+      setAnimationComplete(true)
     }, 6000) // Wait for preloader to complete (5s) plus a small buffer
 
     return () => clearTimeout(timer)
@@ -54,20 +57,76 @@ export default function Home() {
   }, [isLoaded])
 
   return (
-    <div className="min-h-screen bg-spiderman-darkblue">
+    <div className="min-h-screen bg-spiderman-darkblue overflow-hidden">
       <Preloader />
-      <Navbar />
+      
+      {/* Navbar immediately visible when preloader completes */}
+      <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <Navbar />
+      </div>
+      
       <main>
-        <HeroSection />
-        <EventOverview />
-        <ChallengesSection />
-        <ScheduleSection />
-        <PrizesSection />
-        <ContactSection />
-        <SponsorsSection />
-        <FAQSection />
+        {/* Hero section slides in from top */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-24'}`}
+          style={{ transitionDelay: '300ms' }}>
+          <HeroSection />
+        </div>
+        
+        {/* Event overview fades in and scales up */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          style={{ transitionDelay: '700ms' }}>
+          <EventOverview />
+        </div>
+        
+        {/* Challenges section slides in from left */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-24'}`}
+          style={{ transitionDelay: '1000ms' }}>
+          <ChallengesSection />
+        </div>
+        
+        {/* Schedule section slides in from right */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-24'}`}
+          style={{ transitionDelay: '1300ms' }}>
+          <ScheduleSection />
+        </div>
+        
+        {/* Prizes section fades in and slides up */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+          style={{ transitionDelay: '1600ms' }}>
+          <PrizesSection />
+        </div>
+        
+        {/* Contact section slides in from left with rotation */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-x-0 rotate-0' : 'opacity-0 -translate-x-16 rotate-2'}`}
+          style={{ transitionDelay: '1900ms' }}>
+          <ContactSection />
+        </div>
+        
+        {/* Sponsors section slides in from right with scale */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-16 scale-95'}`}
+          style={{ transitionDelay: '2200ms' }}>
+          <SponsorsSection />
+        </div>
+        
+        {/* FAQ section fades in with scale */}
+        <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 scale-100' : 'opacity-0 scale-98'}`}
+          style={{ transitionDelay: '2500ms' }}>
+          <FAQSection />
+        </div>
       </main>
-      <Footer />
+      
+      {/* Footer slides up from bottom */}
+      <div className={`transition-all duration-1000 ease-out transform ${animationComplete ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        style={{ transitionDelay: '2800ms' }}>
+        <Footer />
+      </div>
+
+      <style jsx>{`
+        /* Custom ease function for web-swinging feel */
+        .ease-web-swing {
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+      `}</style>
     </div>
   )
 }
