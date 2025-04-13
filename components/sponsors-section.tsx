@@ -32,15 +32,15 @@ export default function SponsorsSection() {
 
   // Sponsor images by category
   const platinumSponsors = [
-    { name: "Red Bull", image: "/images/sponsors/red-bull.png" },
-    { name: "XYZ", image: "/images/sponsors/xyz.png" },
+    { name: "Red Bull", image: "/images/sponsors/flatlogic.png" },
+    { name: "XYZ", image: "/images/sponsors/unstop.png" },
     { name: "Bassein Catholic Bank", image: "/images/sponsors/Bassein-catholic-bank.png" }
   ]
 
   const goldSponsors = [
     { name: "Postman", image: "/images/sponsors/postman.jpg" },
     { name: "Ethereum", image: "/images/sponsors/eth.png" },
-    { name: "Flatlogic", image: "/images/sponsors/flatlogic.png" },
+    { name: "Flatlogic", image: "/images/sponsors/xyz.png" },
     { name: "JDoodle", image: "/images/sponsors/jdoodle.png" }
   ]
 
@@ -54,10 +54,10 @@ export default function SponsorsSection() {
   ]
 
   const partners = [
-    { name: "Edussphere", image: "/images/sponsors/edussphere.png", type: "Education" },
+    { name: "Edussphere", image: "/images/sponsors/flatlogic.png", type: "AI" },
     { name: "Startup News", image: "/images/sponsors/startup-news.png", type: "Media" },
-    { name: "NoEscape", image: "/images/sponsors/noescape.jpg", type: "Gaming" },
-    { name: "RB", image: "/images/sponsors/RB.jpg", type: "Community" }
+    { name: "NoEscape", image: "/images/sponsors/ettara.png", type: "Coffee" },
+    { name: "RB", image: "/images/sponsors/RB.jpg", type: "Energy" }
   ]
 
   return (

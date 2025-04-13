@@ -34,12 +34,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <div className="w-40">
-              <Image src="/spider-man-logo.png" alt="BitnBuild Logo" width={120} height={40} />
+              <Image src="/gdsc.png" alt="BitnBuild Logo" width={120} height={40} />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center justify-center space-x-6 mx-auto">
             <Link
               href="/"
               className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
@@ -82,15 +82,16 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
-            <Link
-              href="#register"
-              className="ml-2 bg-spiderman-red text-white py-2 px-5 rounded-md hover:bg-spiderman-red/80 transition-all font-medium flex items-center justify-center web-button relative overflow-hidden group"
-            >
-              <span className="relative z-10">Register</span>
-              {/* Web animation */}
-              <span className="absolute inset-0 w-0 bg-white/10 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
           </nav>
+          
+          <Link
+            href="#register"
+            className="hidden md:flex bg-spiderman-red text-white py-2 px-5 rounded-md hover:bg-spiderman-red/80 transition-all font-medium items-center justify-center web-button relative overflow-hidden group"
+          >
+            <span className="relative z-10">Register</span>
+            {/* Web animation */}
+            <span className="absolute inset-0 w-0 bg-white/10 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
 
           {/* Mobile menu button */}
           <button

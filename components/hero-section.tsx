@@ -139,21 +139,21 @@ export default function HeroSection() {
 
       {/* Animated spider webs in corners */}
       <div className="absolute top-0 left-0 w-32 h-32 opacity-30 z-0">
-        <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-0 web-corner" />
+        <Image src="/images/web-corner.svg" alt="Web" layout="fill" objectFit="contain" className="transform rotate-0 web-corner" />
           </div>
       <div className="absolute top-0 right-0 w-32 h-32 opacity-30 z-0">
-        <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-90 web-corner" />
+        <Image src="/images/web-corner.svg" alt="Web" layout="fill" objectFit="contain" className="transform rotate-90 web-corner" />
           </div>
       <div className="absolute bottom-0 right-0 w-32 h-32 opacity-30 z-0">
-        <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-180 web-corner" />
+        <Image src="/images/web-pattern.svg" alt="Web" layout="fill" objectFit="contain" className="transform rotate-180 web-corner" />
         </div>
       <div className="absolute bottom-0 left-0 w-32 h-32 opacity-30 z-0">
-        <Image src="/web-corner.png" alt="Web" layout="fill" objectFit="contain" className="transform rotate-270 web-corner" />
+        <Image src="/images/web-corner.svg" alt="Web" layout="fill" objectFit="contain" className="transform rotate-270 web-corner" />
       </div>
 
       {/* Spider-Man logo with very low opacity */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-5 z-0 mix-blend-overlay">
-        <Image src="/spider-logo.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
+        <Image src="/images/spider-silhouette.svg" alt="Spider-Man Logo" layout="fill" objectFit="contain" />
       </div>
 
       {/* Floating webs */}
