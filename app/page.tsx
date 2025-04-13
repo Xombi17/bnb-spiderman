@@ -7,8 +7,10 @@ import HeroSection from "@/components/hero-section"
 import EventOverview from "@/components/event-overview"
 import ChallengesSection from "@/components/challenges-section"
 import ScheduleSection from "@/components/schedule-section"
-import RegistrationForm from "@/components/registration-form"
-import TestimonialsSection from "@/components/testimonials-section"
+import PrizesSection from "@/components/prizes-section"
+import ContactSection from "@/components/contact-section"
+import SponsorsSection from "@/components/sponsors-section"
+import FAQSection from "@/components/faq-section"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -60,6 +62,10 @@ export default function Home() {
         <EventOverview />
         <ChallengesSection />
         <ScheduleSection />
+        <PrizesSection />
+        <ContactSection />
+        <SponsorsSection />
+        <FAQSection />
       </main>
       <Footer />
     </div>

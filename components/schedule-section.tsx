@@ -10,8 +10,13 @@ export default function ScheduleSection() {
   }, [])
 
   return (
-    <section id="schedule" className="relative py-20 bg-spiderman-blue z-10">
-      <div className="container mx-auto px-4">
+    <section id="schedule" className="relative py-20 bg-spiderman-darkblue z-10">
+      {/* Background gradient */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-spiderman-darkblue to-spiderman-blue/90"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 relative inline-block">
             Event Schedule
@@ -38,7 +43,7 @@ export default function ScheduleSection() {
               {/* Item 1 */}
               <div className="flex flex-col md:flex-row items-center mb-12 scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Registration & Check-in</h3>
                     <p className="text-white/70 mb-2">
                       Arrive early to check in, get your swag, and set up your workspace.
@@ -67,7 +72,7 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="flex-1 order-3 md:pl-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Opening Ceremony</h3>
                     <p className="text-white/70 mb-2">
                       Welcome address, introduction to challenges, and rules explanation.
@@ -80,7 +85,7 @@ export default function ScheduleSection() {
               {/* Item 3 */}
               <div className="flex flex-col md:flex-row items-center mb-12 scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Hackathon Begins!</h3>
                     <p className="text-white/70 mb-2">
                       Start coding and bring your ideas to life. Mentors available for assistance.
@@ -109,7 +114,7 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="flex-1 order-3 md:pl-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Lunch Break</h3>
                     <p className="text-white/70 mb-2">
                       Refuel with a delicious lunch. Networking opportunity with other teams.
@@ -122,7 +127,7 @@ export default function ScheduleSection() {
               {/* Item 5 */}
               <div className="flex flex-col md:flex-row items-center mb-12 scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Workshop: Web Development</h3>
                     <p className="text-white/70 mb-2">
                       Learn advanced web development techniques from industry experts.
@@ -151,7 +156,7 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="flex-1 order-3 md:pl-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Dinner</h3>
                     <p className="text-white/70 mb-2">
                       Enjoy a hearty dinner to keep your energy levels up for the night ahead.
@@ -171,7 +176,7 @@ export default function ScheduleSection() {
               {/* Item 7 */}
               <div className="flex flex-col md:flex-row items-center mb-12 scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Midnight Snack</h3>
                     <p className="text-white/70 mb-2">Late-night energy boost with snacks and refreshments.</p>
                     <div className="text-spiderman-red font-medium">12:00 AM</div>
@@ -198,7 +203,7 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="flex-1 order-3 md:pl-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Breakfast</h3>
                     <p className="text-white/70 mb-2">
                       Start your day with a nutritious breakfast to fuel your coding.
@@ -211,7 +216,7 @@ export default function ScheduleSection() {
               {/* Item 9 */}
               <div className="flex flex-col md:flex-row items-center mb-12 scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Final Hour</h3>
                     <p className="text-white/70 mb-2">
                       Last chance to finalize your projects. Mentors available for last-minute help.
@@ -240,7 +245,7 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="flex-1 order-3 md:pl-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Project Submissions</h3>
                     <p className="text-white/70 mb-2">Submit your projects for judging. Prepare your presentations.</p>
                     <div className="text-spiderman-red font-medium">11:00 AM</div>
@@ -251,7 +256,7 @@ export default function ScheduleSection() {
               {/* Item 11 */}
               <div className="flex flex-col md:flex-row items-center scroll-reveal">
                 <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 mt-4 md:mt-0">
-                  <div className="bg-spiderman-darkblue p-6 rounded-lg border border-white/10 inline-block">
+                  <div className="bg-spiderman-darkblue/80 p-6 rounded-lg border border-white/10 inline-block shadow-lg shadow-spiderman-blue/10">
                     <h3 className="text-xl font-bold text-white mb-2">Closing Ceremony & Awards</h3>
                     <p className="text-white/70 mb-2">
                       Project demonstrations, judging results, and prize distribution.
@@ -272,6 +277,9 @@ export default function ScheduleSection() {
           </div>
         </div>
       </div>
+      
+      {/* Dark gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-blue to-transparent"></div>
     </section>
   )
 }

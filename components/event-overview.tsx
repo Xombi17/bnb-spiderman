@@ -46,26 +46,27 @@ export default function EventOverview() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* About Us Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2
             ref={titleAnimation.ref}
             style={titleAnimation.style}
-            className="text-3xl md:text-4xl font-bold text-white mb-6 relative inline-block"
+            className="text-3xl md:text-5xl font-bold text-white mb-8 relative inline-block"
           >
             ABOUT US
             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-spiderman-red"></span>
           </h2>
 
           <div>
-            <p ref={descAnimation.ref} style={descAnimation.style} className="text-lg text-white/80 mb-6">
-              Welcome to BitnBuild 2024, a global hackathon in Mumbai! A 24-hour event full 
-              of creativity, Squid Games. BitnBuild is your chance to shine as a developer. Are you ready to compete
+            <p ref={descAnimation.ref} style={descAnimation.style} className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
+              Welcome to BitnBuild 2024, a global hackathon organized by GDSC-CRCE in Mumbai! A 24-hour event full 
+              of creativity, innovation, and problem-solving. BitnBuild is your chance to shine as a developer. Are you ready to compete
               with the best and unlock your potential?
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
           {/* World Map with Mumbai Highlighted */}
           <div 
             ref={mapAnimation.ref}
@@ -103,7 +104,7 @@ export default function EventOverview() {
             style={infoAnimation.style}
             className="bg-gradient-to-br from-spiderman-blue to-spiderman-darkblue p-8 rounded-lg border border-white/10 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Event Details</h3>
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Event Details</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <svg
@@ -122,7 +123,7 @@ export default function EventOverview() {
                 </svg>
                 <div>
                   <span className="text-white font-semibold block">When</span>
-                  <span className="text-white/80">April 15-16, 2023</span>
+                  <span className="text-white/80">April 15-16, 2024</span>
                   <span className="text-white/80 block">Starting at 10:00 AM</span>
                 </div>
               </li>
@@ -149,7 +150,7 @@ export default function EventOverview() {
                 </svg>
                 <div>
                   <span className="text-white font-semibold block">Where</span>
-                  <span className="text-white/80">Tech Innovation Center</span>
+                  <span className="text-white/80">Fr. Conceicao Rodrigues College of Engineering</span>
                   <span className="text-white/80 block">Mumbai, India</span>
                 </div>
               </li>
@@ -164,7 +165,7 @@ export default function EventOverview() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 <div>
-                  <span className="text-white font-semibold block">Theme</span>
+                  <span className="text-white font-semibold block">Domains</span>
                   <span className="text-white/80">Web Technologies</span>
                   <span className="text-white/80 block">AI & Machine Learning</span>
                 </div>
@@ -195,7 +196,7 @@ export default function EventOverview() {
         </div>
 
         {/* Event Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <div className="bg-spiderman-blue/20 p-6 rounded-lg border border-white/10 text-center">
             <div className="text-4xl font-bold text-spiderman-red mb-2">500+</div>
             <div className="text-white">Participants</div>

@@ -65,18 +65,12 @@ export default function ChallengesSection() {
     }),
   ]
 
-  const prizesAnimation = useScrollAnimation<HTMLDivElement>({
-    effect: "scale",
-    duration: 0.8,
-    delay: 0.3,
-  })
-
   return (
     <section id="challenges" className="relative py-20 bg-spiderman-blue z-10">
-      {/* Background with Spider-Man image */}
+      {/* Background with Spider-Man image and gradient */}
       <div className="absolute inset-0 z-0">
         <Image src="/spider-man-1.png" alt="Spider-Man" fill className="object-cover object-center opacity-5" />
-        <div className="absolute inset-0 bg-gradient-to-b from-spiderman-blue to-spiderman-blue/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-spiderman-darkblue to-spiderman-blue"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -211,34 +205,10 @@ export default function ChallengesSection() {
             </div>
           </div>
         </div>
-
-        <div className="mt-16 text-center">
-          <div
-            ref={prizesAnimation.ref}
-            style={prizesAnimation.style}
-            className="inline-block bg-spiderman-red/10 border border-spiderman-red/30 rounded-lg p-6 max-w-3xl hover:shadow-lg hover:shadow-spiderman-red/20 transition-all duration-300"
-          >
-            <h3 className="text-xl font-bold text-white mb-3">Prizes</h3>
-            <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div className="p-4 hover:scale-105 transition-transform duration-300">
-                <div className="text-3xl font-bold text-spiderman-red mb-2">$5,000</div>
-                <div className="text-white">1st Place</div>
-              </div>
-              <div className="p-4 hover:scale-105 transition-transform duration-300">
-                <div className="text-3xl font-bold text-spiderman-red mb-2">$3,000</div>
-                <div className="text-white">2nd Place</div>
-              </div>
-              <div className="p-4 hover:scale-105 transition-transform duration-300">
-                <div className="text-3xl font-bold text-spiderman-red mb-2">$2,000</div>
-                <div className="text-white">3rd Place</div>
-              </div>
-            </div>
-            <p className="text-white/80 mt-4">
-              Additional category prizes and special awards will be announced during the event!
-            </p>
-          </div>
-        </div>
       </div>
+      
+      {/* Dark gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-darkblue to-transparent"></div>
     </section>
   )
 }

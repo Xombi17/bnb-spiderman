@@ -1,111 +1,195 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
+      const isScrolled = window.scrollY > 10
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled)
       }
     }
 
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [scrolled])
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-spiderman-darkblue/90 backdrop-blur-md py-2" : "bg-transparent py-4"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-spiderman-darkblue/90 backdrop-blur shadow-xl py-3"
+          : "bg-transparent py-5"
+      }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-10 h-10 animate-web-swing">
-            <Image src="/spider-logo.svg" alt="Bit N Build Logo" width={40} height={40} className="object-contain" />
-          </div>
-          <span className="text-xl font-bold text-white">Bit N Build</span>
-        </Link>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center">
+            <div className="w-40">
+              <Image src="/spider-man-logo.png" alt="BitnBuild Logo" width={120} height={40} />
+            </div>
+          </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <Link href="#about" className="text-white hover:text-spiderman-red transition-colors relative group">
-            About
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-spiderman-red transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link href="#challenges" className="text-white hover:text-spiderman-red transition-colors relative group">
-            Challenges
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-spiderman-red transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link href="#schedule" className="text-white hover:text-spiderman-red transition-colors relative group">
-            Schedule
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-spiderman-red transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link href="#register" className="text-white hover:text-spiderman-red transition-colors relative group">
-            Register
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-spiderman-red transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          <Link
-            href="#register"
-            className="bg-spiderman-red text-white px-6 py-2 rounded-md hover:bg-spiderman-red/80 transition-colors web-button"
-          >
-            Join Now
-          </Link>
-        </nav>
-
-        <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-spiderman-darkblue/95 backdrop-blur-md py-4">
-          <div className="container mx-auto px-4 flex flex-col gap-4">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
             <Link
-              href="#about"
-              className="text-white py-2 border-b border-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              href="/"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
             >
-              About
+              Home
             </Link>
             <Link
-              href="#challenges"
-              className="text-white py-2 border-b border-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              href="#domains"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
             >
-              Challenges
+              Domains
             </Link>
             <Link
-              href="#schedule"
-              className="text-white py-2 border-b border-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              href="#timeline"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
             >
-              Schedule
+              Timeline
+            </Link>
+            <Link
+              href="#prizes"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+            >
+              Prizes
+            </Link>
+            <Link
+              href="#sponsors"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+            >
+              Sponsors
+            </Link>
+            <Link
+              href="#faq"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+            >
+              FAQ
+            </Link>
+            <Link
+              href="#contact"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+            >
+              Contact Us
             </Link>
             <Link
               href="#register"
-              className="text-white py-2 border-b border-white/10"
-              onClick={() => setIsMenuOpen(false)}
+              className="ml-2 bg-spiderman-red text-white py-2 px-5 rounded-md hover:bg-spiderman-red/80 transition-all font-medium flex items-center justify-center web-button relative overflow-hidden group"
+            >
+              <span className="relative z-10">Register</span>
+              {/* Web animation */}
+              <span className="absolute inset-0 w-0 bg-white/10 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-white focus:outline-none"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {mobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-300 overflow-hidden ${
+            mobileMenuOpen ? "max-h-screen py-5" : "max-h-0"
+          }`}
+        >
+          <nav className="flex flex-col space-y-4">
+            <Link
+              href="/"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="#domains"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Domains
+            </Link>
+            <Link
+              href="#timeline"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Timeline
+            </Link>
+            <Link
+              href="#prizes"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Prizes
+            </Link>
+            <Link
+              href="#sponsors"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Sponsors
+            </Link>
+            <Link
+              href="#faq"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="#contact"
+              className="text-white hover:text-spiderman-red transition-colors text-sm uppercase font-medium tracking-wider"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="#register"
+              className="bg-spiderman-red text-white py-2 px-4 rounded-md hover:bg-spiderman-red/80 transition-colors font-medium inline-block text-center"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Register
             </Link>
-            <Link
-              href="#register"
-              className="bg-spiderman-red text-white px-6 py-2 rounded-md text-center mt-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Join Now
-            </Link>
-          </div>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   )
 }
