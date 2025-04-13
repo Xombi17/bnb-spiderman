@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Spider-Man Font */
+@font-face {
+  font-family: 'SpiderMan';
+  src: url('/fonts/spiderman.woff2') format('woff2'),
+       url('/fonts/spiderman.woff') format('woff'),
+       url('/fonts/spiderman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 220 33% 5%;
@@ -44,6 +55,27 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  h1, h2, h3, .spiderman-font {
+    font-family: 'SpiderMan', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Readable Spider-Man font variant */
+.font-spiderman-readable {
+  font-family: 'SpiderMan', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Neon Spider-Man font effect */
+.font-spiderman-neon {
+  font-family: 'SpiderMan', sans-serif;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #E51C24, 0 0 20px #E51C24, 0 0 25px #E51C24;
+  letter-spacing: 0.12em;
 }
 
 .web-line {

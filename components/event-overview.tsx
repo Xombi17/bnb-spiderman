@@ -1,20 +1,11 @@
 "use client"
 
-import { useRef } from "react"
-import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { useLayoutEffect, useRef } from "react"
 import Image from "next/image"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export default function EventOverview() {
-  const sectionRef = useRef<HTMLElement>(null)
-
   const titleAnimation = useScrollAnimation<HTMLHeadingElement>({
-    effect: "fade",
-    direction: "up",
-    distance: 30,
-    duration: 0.8,
-  })
-
-  const descAnimation = useScrollAnimation<HTMLParagraphElement>({
     effect: "fade",
     direction: "up",
     distance: 30,
@@ -22,197 +13,217 @@ export default function EventOverview() {
     delay: 0.2,
   })
 
+  const descAnimation = useScrollAnimation<HTMLDivElement>({
+    effect: "fade",
+    direction: "up",
+    distance: 30,
+    duration: 0.8,
+    delay: 0.4,
+  })
+
   const mapAnimation = useScrollAnimation<HTMLDivElement>({
     effect: "fade",
     direction: "up",
-    distance: 40,
+    distance: 30,
     duration: 0.8,
-    delay: 0.3,
+    delay: 0.6,
   })
 
-  const infoAnimation = useScrollAnimation<HTMLDivElement>({
-    effect: "slide",
-    direction: "right",
-    distance: 50,
+  const locationAnimation = useScrollAnimation<HTMLDivElement>({
+    effect: "fade",
+    direction: "up",
+    distance: 30,
     duration: 0.8,
-    delay: 0.5,
+    delay: 0.8,
+  })
+
+  const statsAnimation = useScrollAnimation<HTMLDivElement>({
+    effect: "fade",
+    direction: "up",
+    distance: 30,
+    duration: 0.8,
+    delay: 1.0,
+  })
+
+  const gdscAnimation = useScrollAnimation<HTMLDivElement>({
+    effect: "fade",
+    direction: "up",
+    distance: 30,
+    duration: 0.8,
+    delay: 0.2,
+  })
+
+  const teamAnimation = useScrollAnimation<HTMLDivElement>({
+    effect: "fade",
+    direction: "up",
+    distance: 30,
+    duration: 0.8,
+    delay: 0.4,
   })
 
   return (
-    <section id="about" ref={sectionRef} className="relative py-20 bg-spiderman-darkblue z-10">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-spiderman-darkblue to-spiderman-blue/90"></div>
+    <section
+      id="about"
+      className="relative py-24 overflow-hidden bg-spiderman-blue"
+    >
+      {/* Top gradient for smooth blend with hero section */}
+      <div className="absolute inset-0 bg-gradient-to-b from-spiderman-blue/90 via-spiderman-blue to-spiderman-darkblue/95 z-0"></div>
+
+      {/* Background web pattern */}
+      <div className="absolute inset-0 opacity-10 z-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('/spider-web-pattern.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            mixBlendMode: "overlay",
+          }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* About Us Section */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2
-            ref={titleAnimation.ref}
-            style={titleAnimation.style}
-            className="text-3xl md:text-5xl font-bold text-white mb-8 relative inline-block"
-          >
-            ABOUT US
-            <span className="absolute -bottom-2 left-0 right-0 h-1 bg-spiderman-red"></span>
-          </h2>
-
-          <div>
-            <p ref={descAnimation.ref} style={descAnimation.style} className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
-              Welcome to BitnBuild 2024, a global hackathon organized by GDSC-CRCE in Mumbai! A 24-hour event full 
-              of creativity, innovation, and problem-solving. BitnBuild is your chance to shine as a developer. Are you ready to compete
-              with the best and unlock your potential?
+        {/* GDSC-CRCE Section */}
+        <div
+          ref={gdscAnimation.ref}
+          style={gdscAnimation.style}
+          className="mb-16 text-center"
+        >
+          <h2 className="text-3xl font-bold text-white mb-4 font-spiderman-readable">GDSC - CRCE</h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-white/80 mb-6">
+              Google Developer Student Clubs (GDSC) is a community where students learn about Google technologies and grow as developers. Our mission is to empower students with technical skills and practical experience.
+            </p>
+            <p className="text-white/80">
+              Fr. Conceicao Rodrigues College of Engineering (CRCE) hosts this vibrant community, providing a platform for students to collaborate, learn, and create solutions for real-world problems.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
-          {/* World Map with Mumbai Highlighted */}
-          <div 
-            ref={mapAnimation.ref}
-            style={mapAnimation.style} 
-            className="relative bg-spiderman-blue/30 p-6 rounded-lg border border-white/10 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300"
+        {/* About Us Section */}
+        <div className="grid md:grid-cols-2 gap-10 mb-16 items-center">
+          <div
+            ref={descAnimation.ref}
+            style={descAnimation.style}
+            className="order-2 md:order-1"
           >
-            <div className="relative aspect-[16/10] w-full">
-              {/* World Map with red dots */}
-              <div className="world-map-container relative w-full h-full">
-                <Image 
-                  src="/54.png" 
-                  alt="World Map" 
-                  fill 
-                  className="object-contain" 
-                  priority
-                />
-                
-                {/* Mumbai Location Marker */}
-                <div className="absolute z-10" style={{ top: '58%', left: '62%' }}>
-                  <div className="relative">
-                    <div className="h-4 w-4 bg-spiderman-red rounded-full animate-spider-sense"></div>
-                    <div className="absolute -top-10 -left-12 bg-spiderman-red px-3 py-1 rounded text-white text-sm whitespace-nowrap">
-                      Mumbai, India
-                    </div>
-                    <div className="absolute -bottom-1 -left-1 h-6 w-6 bg-spiderman-red/30 rounded-full animate-pulse"></div>
-                  </div>
+            <h2 className="text-3xl font-bold text-white mb-6 font-spiderman-readable">About Us</h2>
+            <p className="text-white/80 mb-6">
+              BIT N BUILD 2024 is a 24-hour hackathon organized by GDSC-CRCE that brings together the brightest minds from across the country. Themed around Spider-Man, this event celebrates creativity, innovation, and problem-solving, all while embracing the responsibilty that comes with technological power.
+            </p>
+
+            <div ref={locationAnimation.ref} style={locationAnimation.style}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm">
+                  <h3 className="text-xl font-semibold text-white mb-2 font-spiderman-readable">Date</h3>
+                  <p className="text-white/70">April 15-16, 2024</p>
+                </div>
+                <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm">
+                  <h3 className="text-xl font-semibold text-white mb-2 font-spiderman-readable">Location</h3>
+                  <p className="text-white/70">Fr. Conceicao Rodrigues College of Engineering</p>
+                  <p className="text-white/70">Mumbai, India</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm">
+                  <h3 className="text-xl font-semibold text-white mb-2 font-spiderman-readable">Domains</h3>
+                  <ul className="text-white/70 list-disc pl-5">
+                    <li>Web Technologies</li>
+                    <li>AI & Machine Learning</li>
+                  </ul>
+                </div>
+                <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm">
+                  <h3 className="text-xl font-semibold text-white mb-2 font-spiderman-readable">Participants</h3>
+                  <p className="text-white/70">300+ hackers from across India</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Event Information */}
           <div
-            ref={infoAnimation.ref}
-            style={infoAnimation.style}
-            className="bg-gradient-to-br from-spiderman-blue to-spiderman-darkblue p-8 rounded-lg border border-white/10 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300"
+            ref={mapAnimation.ref}
+            style={mapAnimation.style}
+            className="order-1 md:order-2 relative"
           >
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Event Details</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-spiderman-red mr-3 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <div>
-                  <span className="text-white font-semibold block">When</span>
-                  <span className="text-white/80">April 15-16, 2024</span>
-                  <span className="text-white/80 block">Starting at 10:00 AM</span>
+            <div className="relative h-[400px] w-full rounded-xl overflow-hidden border border-spiderman-blue/30 shadow-xl">
+              <Image
+                src="/54.png"
+                alt="World Map"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+              />
+              
+              {/* Mumbai location marker */}
+              <div className="absolute top-42% left-61% transform -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-4 h-4 bg-spiderman-red rounded-full animate-pulse"></div>
+                <div className="w-12 h-12 bg-spiderman-red/20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping"></div>
+                <div className="absolute top-6 left-0 transform -translate-x-1/4 bg-spiderman-darkblue/80 px-3 py-1 rounded-lg border border-spiderman-red/30 whitespace-nowrap">
+                  <span className="text-white text-sm font-medium">Mumbai, India</span>
                 </div>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-spiderman-red mr-3 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <div>
-                  <span className="text-white font-semibold block">Where</span>
-                  <span className="text-white/80">Fr. Conceicao Rodrigues College of Engineering</span>
-                  <span className="text-white/80 block">Mumbai, India</span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-spiderman-red mr-3 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                <div>
-                  <span className="text-white font-semibold block">Domains</span>
-                  <span className="text-white/80">Web Technologies</span>
-                  <span className="text-white/80 block">AI & Machine Learning</span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-spiderman-red mr-3 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <div>
-                  <span className="text-white font-semibold block">Participants</span>
-                  <span className="text-white/80">500+ Developers</span>
-                  <span className="text-white/80 block">Teams of 2-4 Members</span>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div
+          ref={teamAnimation.ref}
+          style={teamAnimation.style}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white mb-10 text-center font-spiderman-readable">Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-spiderman-red/20 flex items-center justify-center">
+                <span className="text-3xl text-spiderman-red">👨‍💻</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Organizers</h3>
+              <p className="text-white/70">The masterminds behind BIT N BUILD, ensuring everything runs smoothly.</p>
+            </div>
+            <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-spiderman-red/20 flex items-center justify-center">
+                <span className="text-3xl text-spiderman-red">🧠</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Mentors</h3>
+              <p className="text-white/70">Industry experts guiding participants through technical challenges.</p>
+            </div>
+            <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-spiderman-red/20 flex items-center justify-center">
+                <span className="text-3xl text-spiderman-red">🏆</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Judges</h3>
+              <p className="text-white/70">Leaders who evaluate projects based on innovation, impact, and execution.</p>
+            </div>
           </div>
         </div>
 
         {/* Event Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div className="bg-spiderman-blue/20 p-6 rounded-lg border border-white/10 text-center">
-            <div className="text-4xl font-bold text-spiderman-red mb-2">500+</div>
-            <div className="text-white">Participants</div>
-          </div>
-
-          <div className="bg-spiderman-blue/20 p-6 rounded-lg border border-white/10 text-center">
-            <div className="text-4xl font-bold text-spiderman-red mb-2">120+</div>
-            <div className="text-white">Projects Submitted</div>
-          </div>
-
-          <div className="bg-spiderman-blue/20 p-6 rounded-lg border border-white/10 text-center">
-            <div className="text-4xl font-bold text-spiderman-red mb-2">30+</div>
-            <div className="text-white">Sponsors & Partners</div>
+        <div
+          ref={statsAnimation.ref}
+          style={statsAnimation.style}
+          className="my-16"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-spiderman-darkblue/50 p-8 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
+              <h3 className="text-4xl font-bold text-spiderman-red mb-2">300+</h3>
+              <p className="text-white/80">Participants</p>
+            </div>
+            <div className="bg-spiderman-darkblue/50 p-8 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
+              <h3 className="text-4xl font-bold text-spiderman-red mb-2">75+</h3>
+              <p className="text-white/80">Projects Submitted</p>
+            </div>
+            <div className="bg-spiderman-darkblue/50 p-8 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
+              <h3 className="text-4xl font-bold text-spiderman-red mb-2">12+</h3>
+              <p className="text-white/80">Sponsors</p>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom gradient for smooth transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-darkblue via-spiderman-darkblue/90 to-transparent z-0"></div>
     </section>
   )
 }

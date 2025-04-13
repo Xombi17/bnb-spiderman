@@ -36,6 +36,9 @@ export default function SponsorsSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-spiderman-darkblue to-spiderman-blue/20"></div>
       </div>
+      
+      {/* Add a top gradient overlay to blend with the previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-spiderman-blue/20 to-transparent z-0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -63,7 +66,7 @@ export default function SponsorsSection() {
         >
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Platinum Sponsors</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/5 rounded-lg p-6 flex items-center justify-center h-40 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300">
+            <div className="bg-spiderman-darkblue/70 rounded-lg p-6 flex items-center justify-center h-40 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300">
               <div className="relative w-full h-24">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center">
@@ -72,7 +75,7 @@ export default function SponsorsSection() {
                 </div>
               </div>
             </div>
-            <div className="bg-white/5 rounded-lg p-6 flex items-center justify-center h-40 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300">
+            <div className="bg-spiderman-darkblue/70 rounded-lg p-6 flex items-center justify-center h-40 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300">
               <div className="relative w-full h-24">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center">
@@ -81,7 +84,7 @@ export default function SponsorsSection() {
                 </div>
               </div>
             </div>
-            <div className="bg-white/5 rounded-lg p-6 flex items-center justify-center h-40 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300">
+            <div className="bg-spiderman-darkblue/70 rounded-lg p-6 flex items-center justify-center h-40 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300">
               <div className="relative w-full h-24">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center">
@@ -100,7 +103,7 @@ export default function SponsorsSection() {
             {[1, 2, 3, 4].map((index) => (
               <div 
                 key={index}
-                className="bg-white/5 rounded-lg p-4 flex items-center justify-center h-32 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300"
+                className="bg-spiderman-darkblue/70 rounded-lg p-4 flex items-center justify-center h-32 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300"
               >
                 <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center">
                   <span className="text-white/50 text-lg font-bold">SPONSOR {index + 3}</span>
@@ -117,7 +120,7 @@ export default function SponsorsSection() {
             {[1, 2, 3, 4, 5, 6].map((index) => (
               <div 
                 key={index}
-                className="bg-white/5 rounded-lg p-3 flex items-center justify-center h-24 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300"
+                className="bg-spiderman-darkblue/70 rounded-lg p-3 flex items-center justify-center h-24 border border-white/10 hover:border-spiderman-red/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
                   <span className="text-white/50 text-sm font-bold">SPONSOR {index + 7}</span>
@@ -134,7 +137,7 @@ export default function SponsorsSection() {
             {["Technical", "Community", "Education", "Media"].map((type, index) => (
               <div 
                 key={index}
-                className="bg-white/5 rounded-lg p-6 text-center border border-white/10 hover:border-spiderman-red/50 transition-all duration-300"
+                className="bg-spiderman-darkblue/70 rounded-lg p-6 text-center border border-white/10 hover:border-spiderman-red/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4">
                   <span className="text-white/50 text-xs font-bold">LOGO</span>
@@ -161,6 +164,9 @@ export default function SponsorsSection() {
           </a>
         </div>
       </div>
+      
+      {/* Add gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-blue/20 to-transparent z-0"></div>
     </section>
   )
 } 

@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <Image src="/spider-man-logo.png" alt="BitnBuild Logo" width={80} height={30} />
-            </div>
+              </div>
             <p className="text-white/70 mb-6">
               BitnBuild 2024 is a global hackathon organized by GDSC-CRCE, bringing together developers to build innovative solutions.
             </p>
@@ -62,7 +62,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div className="col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">GDSC</h3>
             <ul className="space-y-2">
@@ -88,7 +88,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div className="col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -119,7 +119,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div className="col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">Contact</h3>
             <ul className="space-y-4">
@@ -163,7 +163,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
           <p className="text-white/50 text-sm">
             Made by GDSC Fr.CRCE 2024

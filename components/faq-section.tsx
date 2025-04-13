@@ -13,7 +13,7 @@ interface FAQItemProps {
 
 function FAQItem({ question, answer, isOpen, toggleOpen }: FAQItemProps) {
   return (
-    <div className="border border-white/10 rounded-lg overflow-hidden mb-4 bg-spiderman-blue/30 hover:bg-spiderman-blue/40 transition-colors duration-300">
+    <div className="border border-white/10 rounded-lg overflow-hidden mb-4 bg-spiderman-darkblue/70 hover:bg-spiderman-darkblue/80 transition-colors duration-300">
       <button
         className="w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none"
         onClick={toggleOpen}
@@ -106,6 +106,9 @@ export default function FAQSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-spiderman-blue/20 to-spiderman-darkblue"></div>
       </div>
+      
+      {/* Add a top gradient overlay to blend with the previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-spiderman-blue/20 to-transparent z-0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -152,6 +155,9 @@ export default function FAQSection() {
           </a>
         </div>
       </div>
+      
+      {/* Add gradient transition to footer */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-spiderman-darkblue to-transparent z-0"></div>
     </section>
   )
 } 
