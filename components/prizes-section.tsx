@@ -168,39 +168,71 @@ export default function PrizesSection() {
         </div>
 
         {/* Special Prizes */}
-        <div className="mt-28 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Special Category Prizes</h3>
+        <div className="mt-28 max-w-5xl mx-auto relative">
+          <h3 className="text-4xl font-bold text-white mb-12 text-center tracking-wider">Special Category Prizes</h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300">
-              <h4 className="text-xl font-bold text-white mb-3">Best UI/UX Design</h4>
-              <p className="text-white/80 mb-4">For teams with exceptional user interface and experience design.</p>
-              <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 inline-block">
-                <p className="text-lg font-bold text-white">₹15,000</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* UI/UX Design */}
+            <div className="bg-spiderman-darkblue p-8 rounded-lg text-center relative">
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
+                <svg className="w-8 h-8 text-spiderman-red" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-2.5 16.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm2.5-6c0 .6-.4 1-1 1h-3c-.6 0-1-.4-1-1v-5c0-.6.4-1 1-1h3c.6 0 1 .4 1 1v5zm4 6c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z" />
+                </svg>
+              </div>
+              <div className="pt-14"></div>
+              <h4 className="text-2xl font-bold text-white mb-4">Best UI/UX Design</h4>
+              <p className="text-white/70 mb-6">For teams with exceptional user interface and experience design.</p>
+              <div className="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+              <div className="bg-black/40 rounded-full py-2 px-6 inline-block">
+                <p className="text-xl font-bold text-white">₹5,000</p>
               </div>
             </div>
             
-            <div className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300">
-              <h4 className="text-xl font-bold text-white mb-3">Most Innovative Solution</h4>
-              <p className="text-white/80 mb-4">For the most creative and innovative approach to problem-solving.</p>
-              <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 inline-block">
-                <p className="text-lg font-bold text-white">₹15,000</p>
+            {/* Innovative Solution */}
+            <div className="bg-spiderman-darkblue p-8 rounded-lg text-center relative">
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
+                <svg className="w-8 h-8 text-spiderman-red" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+                </svg>
+              </div>
+              <div className="pt-14"></div>
+              <h4 className="text-2xl font-bold text-white mb-4">Most Innovative Solution</h4>
+              <p className="text-white/70 mb-6">For the most creative and innovative approach to problem-solving.</p>
+              <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
+              <div className="bg-black/40 rounded-full py-2 px-6 inline-block">
+                <p className="text-xl font-bold text-white">₹5,000</p>
               </div>
             </div>
             
-            <div className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300">
-              <h4 className="text-xl font-bold text-white mb-3">Best Use of AI</h4>
-              <p className="text-white/80 mb-4">For projects that leverage artificial intelligence in creative ways.</p>
-              <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 inline-block">
-                <p className="text-lg font-bold text-white">₹15,000</p>
+            {/* Best Use of AI */}
+            <div className="bg-spiderman-darkblue p-8 rounded-lg text-center relative">
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
+                <svg className="w-8 h-8 text-spiderman-red" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21 11.18V9.72c0-.47-.16-.92-.46-1.28L16.6 3.72c-.38-.46-.94-.72-1.54-.72H8.94c-.6 0-1.15.26-1.54.72L3.46 8.44c-.3.36-.46.81-.46 1.28v1.45c0 .8.5 1.45 1 1.83v6c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-6c.5-.38 1-1.03 1-1.83zM13 18h-2v-2h2v2zm0-4.5h-2V10h2v3.5zm-1-5.5c-.83 0-1.5-.67-1.5-1.5S11.17 5 12 5s1.5.67 1.5 1.5S12.83 8 12 8z" />
+                </svg>
+              </div>
+              <div className="pt-14"></div>
+              <h4 className="text-2xl font-bold text-white mb-4">Best Use of AI</h4>
+              <p className="text-white/70 mb-6">For projects that leverage artificial intelligence in creative ways.</p>
+              <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6"></div>
+              <div className="bg-black/40 rounded-full py-2 px-6 inline-block">
+                <p className="text-xl font-bold text-white">₹5,000</p>
               </div>
             </div>
             
-            <div className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300">
-              <h4 className="text-xl font-bold text-white mb-3">Social Impact Award</h4>
-              <p className="text-white/80 mb-4">For solutions addressing important social or environmental challenges.</p>
-              <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 inline-block">
-                <p className="text-lg font-bold text-white">₹15,000</p>
+            {/* Social Impact Award */}
+            <div className="bg-spiderman-darkblue p-8 rounded-lg text-center relative">
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
+                <svg className="w-8 h-8 text-spiderman-red" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </div>
+              <div className="pt-14"></div>
+              <h4 className="text-2xl font-bold text-white mb-4">Social Impact Award</h4>
+              <p className="text-white/70 mb-6">For solutions addressing important social or environmental challenges.</p>
+              <div className="w-20 h-1 bg-orange-500 mx-auto mb-6"></div>
+              <div className="bg-black/40 rounded-full py-2 px-6 inline-block">
+                <p className="text-xl font-bold text-white">₹5,000</p>
               </div>
             </div>
           </div>
