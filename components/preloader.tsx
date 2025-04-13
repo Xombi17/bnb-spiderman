@@ -102,39 +102,39 @@ export default function Preloader() {
         <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] rounded-full border border-spiderman-red/10 transform -translate-x-1/2 -translate-y-1/2 opacity-0 animate-web-circle delay-400"></div>
       </div>
 
-      {/* Spider-Man logo */}
+      {/* Spider-Man logo - larger */}
       <div
-        className={`relative w-32 h-32 mb-8 transition-transform duration-500 ${phase >= 2 ? "scale-110" : "animate-web-swing"}`}
+        className={`relative w-40 h-40 mb-10 transition-transform duration-500 ${phase >= 2 ? "scale-125" : "animate-web-swing"}`}
       >
         <Image src="/spider-logo.svg" alt="Spider-Man Logo" fill className="object-contain" />
         {phase >= 2 && <div className="absolute inset-0 animate-spider-sense rounded-full"></div>}
       </div>
 
-      {/* Title with typing effect */}
-      <h1 className="text-4xl font-bold text-white mb-8 overflow-hidden">
+      {/* Title with typing effect - increased size */}
+      <h1 className="text-6xl font-bold text-white mb-10 overflow-hidden filter drop-shadow-lg text-center">
         <span className="text-spiderman-red inline-block animate-pulse">Bit N Build</span>{" "}
         <span className="inline-block">Hackathon</span>
       </h1>
 
-      {/* Progress bar */}
-      <div className="w-64 h-3 bg-spiderman-blue/50 rounded-full overflow-hidden mb-4 relative">
+      {/* Progress bar - enhanced with better styling */}
+      <div className="w-80 h-4 bg-spiderman-blue/50 rounded-full overflow-hidden mb-6 relative shadow-[0_0_15px_rgba(0,0,0,0.3)]">
         <div
-          className="h-full bg-spiderman-red transition-all duration-100 ease-out"
+          className="h-full bg-gradient-to-r from-spiderman-red/70 to-spiderman-red transition-all duration-100 ease-out"
           style={{ width: `${progress}%` }}
         ></div>
         {/* Glowing effect on progress bar */}
         {progress > 0 && (
           <div
-            className="absolute top-0 h-full w-4 bg-white/30 blur-sm"
+            className="absolute top-0 h-full w-5 bg-white/40 blur-sm"
             style={{ left: `${progress - 2}%`, transition: "left 100ms ease-out" }}
           ></div>
         )}
       </div>
 
-      {/* Loading text */}
-      <div className="text-white/80 text-sm flex items-center">
-        <span className="mr-2">Loading your web-slinging adventure...</span>
-        <span className="text-spiderman-red font-bold">{progress}%</span>
+      {/* Loading text - increased size */}
+      <div className="text-white/90 text-lg flex items-center bg-spiderman-darkblue/50 px-6 py-3 rounded-full backdrop-blur-sm shadow-[0_0_10px_rgba(0,0,0,0.2)]">
+        <span className="mr-3">Loading your web-slinging adventure...</span>
+        <span className="text-spiderman-red font-bold text-2xl">{progress}%</span>
       </div>
 
       {/* Spider web corners - enhanced with more detailed webs */}

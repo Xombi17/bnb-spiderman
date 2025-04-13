@@ -58,12 +58,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-spiderman-darkblue overflow-hidden">
-      <Preloader />
+      {/* Navbar always visible, not affected by animations */}
+      <Navbar />
       
-      {/* Navbar immediately visible when preloader completes */}
-      <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        <Navbar />
-      </div>
+      {/* Preloader on top of everything */}
+      <Preloader />
       
       <main>
         {/* Hero section slides in from top */}
