@@ -66,6 +66,20 @@ export default function EventOverview() {
       id="about"
       className="relative py-24 overflow-hidden bg-spiderman-blue"
     >
+      {/* Subtle Spider-Man image in background */}
+      <div className="absolute inset-0 opacity-3 mix-blend-overlay z-0">
+        <div className="absolute right-0 top-0 w-1/2 h-full">
+          <Image 
+            src="/spider-man-3.png" 
+            alt="Spider-Man" 
+            layout="fill" 
+            objectFit="contain" 
+            objectPosition="right center" 
+            quality={30}
+          />
+        </div>
+      </div>
+
       {/* Top gradient for smooth blend with hero section */}
       <div className="absolute inset-0 bg-gradient-to-b from-spiderman-blue/90 via-spiderman-blue to-spiderman-darkblue/95 z-0"></div>
 
@@ -167,14 +181,14 @@ export default function EventOverview() {
           </div>
         </div>
 
-        {/* Team Section */}
+        {/* Team Section - with subtle spider-web background */}
         <div
           ref={teamAnimation.ref}
           style={teamAnimation.style}
-          className="mb-16"
+          className="mb-16 relative"
         >
-          <h2 className="text-3xl font-bold text-white mb-10 text-center font-spiderman-readable">Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-white mb-10 text-center font-spiderman-readable relative z-10">Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             <div className="bg-spiderman-darkblue/50 p-6 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-spiderman-red/20 flex items-center justify-center">
                 <span className="text-3xl text-spiderman-red">👨‍💻</span>
@@ -199,13 +213,26 @@ export default function EventOverview() {
           </div>
         </div>
 
-        {/* Event Stats */}
+        {/* Event Stats - with subtle Spider-Man background */}
         <div
           ref={statsAnimation.ref}
           style={statsAnimation.style}
-          className="my-16"
+          className="my-16 relative"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="absolute inset-0 opacity-4 z-0 mix-blend-overlay">
+            <div className="absolute right-0 w-1/3 h-full">
+              <Image 
+                src="/spider-logo.svg" 
+                alt="Spider-Man Logo" 
+                layout="fill" 
+                objectFit="contain"
+                objectPosition="center right"
+                className="transform rotate-12"
+              />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             <div className="bg-spiderman-darkblue/50 p-8 rounded-lg border border-spiderman-blue/20 backdrop-blur-sm text-center">
               <h3 className="text-4xl font-bold text-spiderman-red mb-2">300+</h3>
               <p className="text-white/80">Participants</p>
