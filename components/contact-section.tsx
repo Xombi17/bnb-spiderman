@@ -94,8 +94,21 @@ export default function ContactSection() {
             style={heroAnimation.style}
             className="relative"
           >
-            {/* Main hero panel */}
-            <div className="bg-gradient-to-br from-spiderman-darkblue via-spiderman-blue/30 to-spiderman-darkblue border-4 border-white rounded-lg overflow-hidden relative transform rotate-[-1deg] shadow-[0_0_30px_rgba(255,0,0,0.2)]">
+            {/* Spider-Man pulling web effect */}
+            <div className="absolute -left-40 md:-left-100 top-[100%] w-44 h-44 md:w-52 md:h-52 z-10 transform -rotate-6">
+              <Image 
+                src="/spiderman_pulling.png" 
+                alt="Spider-Man Pulling" 
+                width={200} 
+                height={200} 
+                priority
+              />
+              
+              {/* Spider-Man pulling without web lines */}
+            </div>
+
+            {/* Main hero panel with slightly modified effect to appear being pulled */}
+            <div className="bg-gradient-to-br from-spiderman-darkblue via-spiderman-blue/30 to-spiderman-darkblue border-4 border-white rounded-lg overflow-hidden relative transform -rotate-[2deg] shadow-[0_0_30px_rgba(255,0,0,0.2)] origin-left hover:rotate-[-1deg] transition-transform duration-500">
               {/* Web pattern overlay */}
               <div className="absolute inset-0 opacity-10">
                 <Image src="/web-pattern.svg" alt="Web Pattern" layout="fill" objectFit="cover" />
