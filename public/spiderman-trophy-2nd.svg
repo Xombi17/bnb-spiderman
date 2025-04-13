@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="240" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base of trophy -->
+  <rect x="65" y="200" width="70" height="35" rx="4" fill="#1A2942" stroke="#A9A9A9" stroke-width="2"/>
+  
+  <!-- Stem of trophy -->
+  <rect x="90" y="165" width="20" height="35" fill="#1A2942" stroke="#A9A9A9" stroke-width="2"/>
+  
+  <!-- Cup body of trophy -->
+  <path d="M50 70C50 45 70 35 100 35C130 35 150 45 150 70C150 110 130 140 100 165C70 140 50 110 50 70Z" fill="#1A2942" stroke="#A9A9A9" stroke-width="2"/>
+  
+  <!-- Handles -->
+  <path d="M50 70C40 70 32 80 32 90C32 98 40 105 50 105" stroke="#A9A9A9" stroke-width="3" fill="none"/>
+  <path d="M150 70C160 70 168 80 168 90C168 98 160 105 150 105" stroke="#A9A9A9" stroke-width="3" fill="none"/>
+  
+  <!-- Web patterns on the cup -->
+  <path d="M75 55 L125 55" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M65 75 L135 75" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M60 95 L140 95" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M60 115 L140 115" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M70 135 L130 135" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Vertical web lines -->
+  <path d="M100 35 L100 165" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M80 45 L80 150" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M120 45 L120 150" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M65 65 L65 130" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  <path d="M135 65 L135 130" stroke="#A9A9A9" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Spider emblem -->
+  <path d="M100 90 C92 82 88 86 84 82 C88 90 88 96 100 100 C112 96 112 90 116 82 C112 86 108 82 100 90Z" fill="#A9A9A9"/>
+  
+  <!-- Blue accent -->
+  <circle cx="100" cy="90" r="20" fill="#0066CC" opacity="0.2"/>
+  
+  <!-- 2nd place text -->
+  <rect x="75" y="210" width="50" height="20" rx="2" fill="#A9A9A9"/>
+  <text x="100" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">2ND</text>
+  
+  <!-- Silver shine effects -->
+  <circle cx="70" cy="55" r="4" fill="white" opacity="0.6"/>
+  <circle cx="130" cy="55" r="4" fill="white" opacity="0.6"/>
+  <circle cx="100" cy="45" r="6" fill="white" opacity="0.6"/>
+</svg> 

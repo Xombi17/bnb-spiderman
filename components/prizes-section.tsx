@@ -76,14 +76,13 @@ export default function PrizesSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-24">
           <h2
             ref={titleAnimation.ref}
             style={titleAnimation.style}
-            className="text-3xl md:text-4xl font-bold text-white mb-6 relative inline-block"
+            className="text-5xl md:text-6xl font-bold text-white mb-10 relative inline-block tracking-wider"
           >
-            PRIZES
-            <span className="absolute -bottom-2 left-0 right-0 h-1 bg-spiderman-red"></span>
+            PRIZES.
           </h2>
 
           <div>
@@ -94,125 +93,82 @@ export default function PrizesSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Second Prize */}
+        <div className="flex flex-col md:flex-row justify-around items-center md:items-end gap-12 max-w-5xl mx-auto">
+          {/* 2nd Prize */}
           <div
             ref={secondPrizeAnimation.ref}
             style={secondPrizeAnimation.style}
-            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:translate-y-12 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300 relative overflow-hidden group"
+            className="text-center"
           >
-            {/* Web corner decoration that appears on hover */}
-            <div className="absolute top-0 left-0 w-16 h-16 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
-              style={{
-                backgroundImage: "url('/web-corner.png')",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat"
-              }}>
+            <div className="relative w-48 h-48 mx-auto mb-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-300 rounded-full"></div>
+              <div className="absolute inset-2 bg-black rounded-full flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="/spiderman-trophy-2nd.svg" 
+                  alt="Second Prize" 
+                  width={150} 
+                  height={150} 
+                  className="object-contain filter drop-shadow-[0_0_10px_rgba(169,169,169,0.6)]"
+                />
+              </div>
             </div>
-            
-            <div className="relative w-24 h-24 mx-auto mb-4">
-              <Image
-                src="/silver-trophy.png"
-                alt="Second Prize"
-                width={96}
-                height={96}
-                className="object-contain"
-              />
+            <h3 className="text-4xl font-bold text-white mb-4 tracking-widest">2ND PRIZE</h3>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-white">₹35,000</p>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">2nd Prize</h3>
-            <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 mb-4 spidey-sense">
-              <p className="text-xl font-bold text-white">₹50,000</p>
-            </div>
-            <ul className="text-white/80 space-y-2">
-              <li>Development gear package</li>
-              <li>Internship interviews</li>
-              <li>Premium subscriptions</li>
-            </ul>
           </div>
 
-          {/* First Prize */}
+          {/* 1st Prize */}
           <div
             ref={firstPrizeAnimation.ref}
             style={firstPrizeAnimation.style}
-            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:-translate-y-6 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300 relative overflow-hidden group"
+            className="text-center md:mb-12"
           >
-            {/* Web corner decoration that appears on hover */}
-            <div className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
-              style={{
-                backgroundImage: "url('/web-corner.png')",
-                backgroundSize: "contain",
-                backgroundPosition: "top right",
-                backgroundRepeat: "no-repeat",
-                transform: "rotate(90deg)"
-              }}>
+            <div className="relative w-56 h-56 mx-auto mb-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-full"></div>
+              <div className="absolute inset-2 bg-black rounded-full flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="/spiderman-trophy-1st.svg" 
+                  alt="First Prize" 
+                  width={170} 
+                  height={170} 
+                  className="object-contain filter drop-shadow-[0_0_15px_rgba(255,215,0,0.6)]"
+                />
+              </div>
             </div>
-            
-            <div className="relative w-32 h-32 mx-auto mb-4">
-              <div className="absolute -top-4 -left-4 -right-4 h-1 bg-spiderman-red"></div>
-              <div className="absolute -top-4 -bottom-4 -left-4 w-1 bg-spiderman-red"></div>
-              <div className="absolute -bottom-4 -left-4 -right-4 h-1 bg-spiderman-red"></div>
-              <div className="absolute -top-4 -bottom-4 -right-4 w-1 bg-spiderman-red"></div>
-              <Image
-                src="/gold-trophy.png"
-                alt="First Prize"
-                width={128}
-                height={128}
-                className="object-contain"
-              />
+            <h3 className="text-4xl font-bold text-white mb-4 tracking-widest">1ST PRIZE</h3>
+            <div className="text-center">
+              <p className="text-4xl font-bold text-white">₹50,000</p>
             </div>
-            <h3 className="text-3xl font-bold text-white mb-2">1st Prize</h3>
-            <div className="bg-spiderman-red rounded-lg py-3 px-4 mb-4 spidey-sense">
-              <p className="text-2xl font-bold text-white">₹100,000</p>
-            </div>
-            <ul className="text-white/80 space-y-2">
-              <li>Professional development kit</li>
-              <li>Direct job interviews</li>
-              <li>Mentorship opportunities</li>
-              <li>Free conference tickets</li>
-              <li>VIP networking access</li>
-            </ul>
           </div>
 
-          {/* Third Prize */}
+          {/* 3rd Prize */}
           <div
             ref={thirdPrizeAnimation.ref}
             style={thirdPrizeAnimation.style}
-            className="bg-spiderman-darkblue/70 rounded-lg border border-white/10 p-6 text-center transform md:translate-y-12 hover:shadow-lg hover:shadow-spiderman-red/10 transition-all duration-300 relative overflow-hidden group"
+            className="text-center"
           >
-            {/* Web corner decoration that appears on hover */}
-            <div className="absolute bottom-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
-              style={{
-                backgroundImage: "url('/web-corner.png')",
-                backgroundSize: "contain",
-                backgroundPosition: "bottom right",
-                backgroundRepeat: "no-repeat",
-                transform: "rotate(180deg)"
-              }}>
+            <div className="relative w-44 h-44 mx-auto mb-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-amber-500 rounded-full"></div>
+              <div className="absolute inset-2 bg-black rounded-full flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="/spiderman-trophy-3rd.svg" 
+                  alt="Third Prize" 
+                  width={130} 
+                  height={130} 
+                  className="object-contain filter drop-shadow-[0_0_8px_rgba(205,127,50,0.6)]"
+                />
+              </div>
             </div>
-            
-            <div className="relative w-24 h-24 mx-auto mb-4">
-              <Image
-                src="/bronze-trophy.png"
-                alt="Third Prize"
-                width={96}
-                height={96}
-                className="object-contain"
-              />
+            <h3 className="text-4xl font-bold text-white mb-4 tracking-widest">3RD PRIZE</h3>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-white">₹10,000</p>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">3rd Prize</h3>
-            <div className="bg-spiderman-red/20 rounded-lg py-2 px-4 mb-4 spidey-sense">
-              <p className="text-xl font-bold text-white">₹25,000</p>
-            </div>
-            <ul className="text-white/80 space-y-2">
-              <li>Tech accessory bundle</li>
-              <li>Learning platform credits</li>
-              <li>Certificate and recognition</li>
-            </ul>
           </div>
         </div>
 
         {/* Special Prizes */}
-        <div className="mt-20 max-w-4xl mx-auto">
+        <div className="mt-28 max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Special Category Prizes</h3>
           
           <div className="grid md:grid-cols-2 gap-6">

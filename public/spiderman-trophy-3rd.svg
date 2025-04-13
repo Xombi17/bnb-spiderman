@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="220" viewBox="0 0 180 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base of trophy -->
+  <rect x="60" y="185" width="60" height="30" rx="4" fill="#1A2942" stroke="#CD7F32" stroke-width="2"/>
+  
+  <!-- Stem of trophy -->
+  <rect x="80" y="155" width="20" height="30" fill="#1A2942" stroke="#CD7F32" stroke-width="2"/>
+  
+  <!-- Cup body of trophy -->
+  <path d="M50 70C50 50 70 40 90 40C110 40 130 50 130 70C130 105 110 130 90 155C70 130 50 105 50 70Z" fill="#1A2942" stroke="#CD7F32" stroke-width="2"/>
+  
+  <!-- Handles -->
+  <path d="M50 70C42 70 35 78 35 86C35 94 42 100 50 100" stroke="#CD7F32" stroke-width="3" fill="none"/>
+  <path d="M130 70C138 70 145 78 145 86C145 94 138 100 130 100" stroke="#CD7F32" stroke-width="3" fill="none"/>
+  
+  <!-- Web patterns on the cup -->
+  <path d="M70 55 L110 55" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M60 70 L120 70" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M55 85 L125 85" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M55 100 L125 100" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M60 115 L120 115" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M70 130 L110 130" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Vertical web lines -->
+  <path d="M90 40 L90 155" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M75 45 L75 140" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M105 45 L105 140" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M60 60 L60 120" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  <path d="M120 60 L120 120" stroke="#CD7F32" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Spider emblem - smaller for 3rd place -->
+  <path d="M90 85 C84 79 81 82 78 79 C81 85 81 90 90 93 C99 90 99 85 102 79 C99 82 96 79 90 85Z" fill="#CD7F32"/>
+  
+  <!-- Decorative web corners -->
+  <path d="M55 55 L65 65" stroke="#CD7F32" stroke-width="1" opacity="0.4"/>
+  <path d="M55 55 L50 70" stroke="#CD7F32" stroke-width="1" opacity="0.4"/>
+  
+  <path d="M125 55 L115 65" stroke="#CD7F32" stroke-width="1" opacity="0.4"/>
+  <path d="M125 55 L130 70" stroke="#CD7F32" stroke-width="1" opacity="0.4"/>
+  
+  <!-- 3rd place text -->
+  <rect x="65" y="195" width="50" height="15" rx="2" fill="#CD7F32"/>
+  <text x="90" y="207" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">3RD</text>
+  
+  <!-- Bronze shine effects -->
+  <circle cx="70" cy="55" r="3" fill="#E6BE8A" opacity="0.6"/>
+  <circle cx="110" cy="55" r="3" fill="#E6BE8A" opacity="0.6"/>
+  <circle cx="90" cy="50" r="5" fill="#E6BE8A" opacity="0.6"/>
+</svg> 
