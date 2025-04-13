@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-spiderman-red transition-colors">
-                  Fr.CRCE
+                  FRCRCE
                 </Link>
               </li>
             </ul>
